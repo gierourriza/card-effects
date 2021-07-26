@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Card Effect Challenge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/style.css">
+<body>
+    <div class="container">
+        <div class="mySlides slide-fading">
+            <h1>Monkey D. Luffy</h1>
+            <img src="./assets/images/img1.jpg" >
+            <p>Monkey D. Luffy, also known as " Straw Hat Luffy" and commonly as "Straw Hat", is the main protagonist of the manga and anime, One Piece. He is the founder and captain of the increasingly infamous and powerful Straw Hat Pirates, as well as one of its top fighters. His lifelong dream is to become the Pirate King by finding the legendary treasure left behind by the late Gol D. Roger. He believes that being the Pirate King means having the most freedom in the world.</p>
+        </div>
+        <div class="mySlides slide-fading">
+            <h1>Roronoa Zoro</h1>
+            <img src="./assets/images/img2.jpg" >
+            <p>Roronoa Zoro, also known as "Pirate Hunter" Zoro, is the combatant of the Straw Hat Pirates, and one of their two swordsmen. Formerly a bounty hunter, he is the second member of the crew and the first to join, doing so in the Romance Dawn Arc.</p>
+        </div>
+        <div class="mySlides slide-fading">
+            <h1>Vinsmoke Sanji</h1>
+            <img src="./assets/images/img3.jpg" >
+            <p>"Black Leg" Sanji,born as Vinsmoke Sanji, is the cook of the Straw Hat Pirates. He is the fifth member of the crew and the fourth to join, doing so at the end of the Baratie Arc. </p>
+        </div>
+    <button onclick="plusDivs(-1)">Next</button>
+    <button onclick="plusDivs(1)">Previous</button>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            } 
+                x[slideIndex-1].style.transition = 0.2;
+              x[slideIndex-1].style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

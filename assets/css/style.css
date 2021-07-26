@@ -1,0 +1,65 @@
+.container{
+    width: 900px;
+    margin: 0px auto;
+}
+.mySlides{
+    display: inline-block;
+    text-align: center;
+    border: 4px solid gray;
+    height: 600px;
+    background-color: red;
+    border-radius: 10px;
+    font-family: ONE PIECE;
+    font-size: 25px;
+    color: white;
+}
+.slide-fading{
+    animation:fading 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    }
+@keyframes fading{
+    0%{
+        opacity:0}
+    50%{
+        opacity:1
+        }/*100%{opacity:0}*/}
+img{
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    transition: width 2s, height 4s;
+
+}
+img:hover {
+    width: 300px;
+    height: 300px;
+}
+button{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: right;
+}
+body > button {
+    background: #428BCA;
+    color: #fff;
+    font-family: Sans-serif;
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    line-height: 60px;
+    margin: 25px 25px;
+    text-align: center;
+    border: 0;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background: #CF4647;
+}
